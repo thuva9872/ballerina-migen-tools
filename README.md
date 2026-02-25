@@ -121,6 +121,22 @@ $ ./gradlew :mi-tests:generateExpectedArtifacts -PartifactTarget=central \
     -PcentralPackage=org/name:1.0.0,org2/name2:2.0.0
 ```
 
+```mermaid
+flowchart LR
+    subgraph WSO2["WSO2 MI Server"]
+        A["Synapse\nSequence"]
+        B["Connector Template\n(XML)"]
+        C["**Mediator.java**
+
+        - Loads Ballerina Runtime
+        - Executes Bal function
+        - Returns result"]
+
+        A --> B --> C
+    end
+```
+
+
 ## Contribute to Ballerina
 
 As an open-source project, Ballerina welcomes contributions from the community.
